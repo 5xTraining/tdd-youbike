@@ -5,7 +5,7 @@ class User
   end
 
 
-  def login?
+  def is_monthly?
     return @ans
     # true if ans == true
     # false if ans == false

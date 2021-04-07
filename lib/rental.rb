@@ -1,38 +1,29 @@
-class Rental
-  def initialize (user)
-    @user = user
+require "employee"
+
+class Income
+  def initialize (employee)
+    @employee = employee
+    @income = income
   end
 
-  def add(bike)
-    bike.rent!
-    @bike
-    #驚嘆號表示要做某件事情
-    #this rent is bike's rent, not rental'rent
-  end
+  # def add(bike)
+  #   bike.rent!
+  #   @bike
+  #   #驚嘆號表示要做某件事情
+  #   #this rent is bike's rent, not rental'rent
+  # end
 
-  def remove(bike)
-    bike.return!
-  end
+  # def remove(bike)
+  #   bike.return!
+  # end
 
-  def charge
-    mis = bike.rental_duration_mins
+  def calc_to_hr
+    # mis = bike.rental_duration_mins
 
-    if @user.member?
-
+    if @user.monthly?
+      @calc_to_hr = (income / 30 / 8)
     else
-      # 4hrs
-      case mins
-      when 0..240
-        (mins / 30).ceil * 10
-      else
-        80 + ((mins - 240) /30 ).ceil * 20
-      end
-
+      @calc_to_hr = income
     end
-
-
-    
-
-  end
 
 end
