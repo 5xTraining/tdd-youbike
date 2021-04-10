@@ -1,17 +1,19 @@
-# YouBike TDD 練習
+# 月薪加班費
 
-## 收費規則
+平日加班：
+1-2 hrs salary * hr * 1.34
+3-4 hrs s * hr * 1.67
 
-- 會員：
-  - 前 30 分鐘 5 元
-  - 超過 30 分鐘，但於 4 小時內還車，費率為每 30 分鐘 10 元。
-  - 超過 4 小時，但於 8 小時內還車，第 4~8 小時費率為每 30 分鐘 20 元。
-  - 超過 8 小時，於第 8 小時起將以每 30 分鐘 40 元計價。
-- 非會員（單次租車）：
-  - 4 小時內，費率為每 30 分鐘 10 元。
-  - 超過 4 小時，但於 8 小時內還車，第 4~8 小時費率為每 30 分鐘 20 元。
+休息日加班：
+1-2 hrs salary * hr * 1.34
+3-8 hrs s * hr * 1.67
+9-12 hrs s * hr * 2.67
 
-ref: [臺北市政府交通局](https://www.dot.gov.taipei/News_Content.aspx?n=8AF5CCCCF7B8610A&sms=87415A8B9CE81B16&s=7F22D0A704345945)
+假日：
+1-8 hrs 月薪：s * 8hr
+<!-- 1-8 hrs 時薪：s * hr * 2 -->
+9-10 hrs s * hr * 2.34
+11-12 hrs s * 2.67
 
 ## 目標
 
@@ -24,3 +26,4 @@ ref: [臺北市政府交通局](https://www.dot.gov.taipei/News_Content.aspx?n=8
 2. 執行 `rspec` 並通過全部測試。
 
 by eddie@5xcampus.com
+# tdd-salary
