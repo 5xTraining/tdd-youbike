@@ -1,21 +1,10 @@
-# 會員：
-# 前 30 分鐘 5 元
-# 超過 30 分鐘，但於 4 小時內還車，費率為每 30 分鐘 10 元。
-# 超過 4 小時，但於 8 小時內還車，第 4~8 小時費率為每 30 分鐘 20 元。
-# 超過 8 小時，於第 8 小時起將以每 30 分鐘 40 元計價。
-# 非會員（單次租車）：
-# 4 小時內，費率為每 30 分鐘 10 元。
-# 超過 4 小時，但於 8 小時內還車，第 4~8 小時費率為每 30 分鐘 20 元。
+require 'money'
+require 'employ'
 
-# Ｑ：小時＆分鐘的輸入方式怎麼計算？
 
-require 'bike2'
-require 'user'
-require 'timecop'
-
-RSpec.describe Bike do
-  context "非會員使用" do
-    let(:user) { User.new(false) }
+RSpec.describe Money do
+  context "平日與休息日" do
+    let(:user) { User.new(true) }) }
     it "in 4hrs" do
       bike = Bike.new(0, user: user)
       now = Time.now
@@ -47,7 +36,7 @@ RSpec.describe Bike do
     end
   end
 
-  context '會員使用' do
+  context '假日' do
     let(:user) { User.new(true) }
     it "in 30mins" do
       bike = Bike.new(0, user: user)

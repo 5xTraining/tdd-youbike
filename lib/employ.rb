@@ -1,14 +1,13 @@
-class User
+class Employ
 
   def initialize(ans)
     @ans = ans
   end
 
 
-  def login?
+  def is_monthly?
     return @ans
-    # true if ans == true
-    # false if ans == false
+
   end
 
   def ans
