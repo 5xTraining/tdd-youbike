@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .calc_time{
+      margin: 10px;
+    }
+    .sub{
+      background-color: #aaf;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>U-Bike費率試算</h1>
+  <form action="/result" method="=post"></form>
+  <div class="check_member">
+    <input type="checkbox" class="check-mem" id="member" name="member">
+    具有會員身份
+    # <option value="" name="member">具有會員身份</option>
+    # <option value="" name="non-member">不是會員</option>
+    
+  </div>
+  <div class="calc_time">
+    <input type="number" class="using" name="hours" value="0" min="0">時
+    <input type="number" class="using" name="mins" value="0" min="0">分
+  </div>
+
+
+  <button type="submit" class="btn btn-success">計算</button>
+  
+</body>
+</html>
